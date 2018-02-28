@@ -1,0 +1,230 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <!-- To correctly display text, AMP requires that you specify the charset for the page. Has the be first child of the <head> tag. -->
+    <meta charset="utf-8" />
+     <!-- AMP requires the definition of a width and minimum-scale for the viewport. These values must be defined as device-width and 1, respectively. The viewport is a common tag included in the <head> of an HTML page. -->
+    <!-- The values specified for width and minimum-scale are the required values in AMP. Defining initial-scale is not mandatory but it’s a commonly included in mobile web development and it's recommended. -->  
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!-- Every AMP document needs to have a link referencing the "canonical" version of that document. -->
+    <link rel="canonical" href="/article.html">
+    <link rel="shortcut icon" href="amp_favicon.png">
+
+    <title>News Article</title>
+
+    <!-- Every AMP document requires the following AMP boilerplate code: -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <style amp-custom>
+
+    body {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+      background: Tomato;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0.5em;
+      background: white;
+      box-shadow: 0px 3px 5px grey;
+    }
+
+    p {
+      padding: 0.5em;
+      margin: 0.5em;
+    }
+
+    amp-fit-text {
+    white-space: normal;
+    }
+    </style>
+
+    <!-- Add the AMP library file -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Script for an additional JavaScript request for the YouTube component -->
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <!-- Script for an displaying Tweets -->
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <!-- Script for using the amp-fit-text component -->
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <!-- Script for using amp-carousel component library -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <!-- Script for including the amp-analytics component library -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- Script for amp-ad/ amp-embed -->
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    
+    <!-- Valid AMP pages do not require schema.org structured data, but some platforms like Google Search require it for certain experiences like the Top stories carousel. It's generally a good idea to include structured data. Structured data helps search engines to better understand your web page, and to better display your content in Search Engine Result Pages (e.g., in rich snippets). The structured data is included in the <head> tag of your AMP page via an application/ld+json type script tag. -->
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org",
+     "@type": "NewsArticle",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"https://example.com/my-article.html"
+     },
+     "headline": "My First AMP Article",
+     "image": {
+       "@type": "ImageObject",
+       "url": "https://example.com/article_thumbnail1.jpg",
+       "height": 800,
+       "width": 800
+     },
+     "datePublished": "2015-02-05T08:00:00+08:00",
+     "dateModified": "2015-02-05T09:20:00+08:00",
+     "author": {
+       "@type": "Person",
+       "name": "John Doe"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP Times",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://example.com/amptimes_logo.jpg",
+         "width": 600,
+         "height": 60
+       }
+     },
+     "description": "My first experience in an AMPlified world"
+    }
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+      News Site
+    </header>
+    <!-- Ads in AMP are constructed by using the amp-ad component. The amp-ad component allows you to configure ads in several ways, such as the width, height and layout mode. -->
+
+    <!-- Take note of the type attribute, which informs the amp-ad component of the ad platform that we want to use. In this case, we want to use the DoubleClick platform, so we specified doubleclick as the value. -->
+
+    <!-- The data-slot attribute is more unique. In amp-ad, any attributes that start with data- are vendor-specific attributes. This means that not all vendors will necessarily require this particular attribute, nor will they necessarily react if it is supplied. -->
+    <article>
+    <!-- The amp-fit-text component allows you to define a fixed width and height element, and a maximum font size. -->  
+    <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">Big, bold article quote goes here.
+    </amp-fit-text>
+    <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">Hello!
+    </amp-fit-text>
+    <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
+   And the Raven, never flitting, still is sitting, still is sitting. On the pallid bust of Pallas just above my chamber door; And his eyes have all the seeming of a demon’s that is dreaming, And the lamp-light o’er him streaming throws his shadow on the floor; And my soul from out that shadow that lies floating on the floor. Shall be lifted—nevermore!
+    </amp-fit-text>
+    <!-- Carousel of images -->
+ <!--    <amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="2000" loop>
+    <amp-img src="millen1.jpg" width="300" height="168" layout="responsive"></amp-img>
+    <amp-img src="millen2.jpg" width="300" height="168" layout="responsive"></amp-img>
+    <amp-img src="Tech_tree.png" width="300" height="168" layout="responsive"></amp-img>
+    </amp-carousel> --> 
+
+    <!-- Mixed media carousel -->
+    <amp-carousel layout="fixed-height" height="250" type="carousel" >
+    <amp-img src="millen2.jpg" width="300" height="250"></amp-img>
+
+    <amp-ad width="300" height="250"
+      type="doubleclick"
+      data-slot="/35096353/amptesting/image/static">
+        <div placeholder>This ad is still loading.</div>
+    </amp-ad>
+
+    <amp-fit-text width="300" height="250" layout="fixed">
+        Big, bold article quote goes here.
+    </amp-fit-text>
+    </amp-carousel>
+    <!-- Tweet -->
+    <!-- The data-tweetid attribute is another example of a custom attribute required by a particular platform. In this case, Twitter correlates the value of the data-tweetid attribute to a particular Tweet. -->
+    <amp-twitter width="486" height="657" layout="responsive" data-tweetid="638793490521001985">
+    <div fallback>
+    <p>The tweet could not be loaded.</p>
+    </div>  
+    </amp-twitter>
+    <!-- Embed a YouTube video -->
+    <amp-youtube data-videoid="npum8JsITQE" layout="responsive" width="480" height="270">
+    <div fallback>
+    <p>The video could not be loaded.</p>
+    </div>
+    </amp-youtube>
+    <!-- Monetize with ads --> 
+    <amp-ad width="300" height="250" type="doubleclick"
+      data-slot="/35096353/amptesting/image/static">
+    </amp-ad>
+
+    <amp-ad width="300" height="250" type="a9" data-aax_size="300x250" data-aax_pubname="test123" data-aax_src="302">
+    </amp-ad>
+
+    <amp-ad width="300" height="250" type="doubleclick" data-slot="/35096353/amptesting/geo/uk">
+      <div fallback>No ad appeared because you're not browsing from the UK!</div>
+    </amp-ad>
+
+    <amp-ad width="300" height="250" type="doubleclick" data-slot="/35096353/amptesting/geo/us">
+      <div fallback>No ad appeared because you're not browsing from the US!</div>
+    </amp-ad>
+
+      <h1>Article Name</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+
+      <!-- <amp-img> requires to have width and height pre set. -->
+      <!-- The <layout> informs AMP of how you want the element positioned and scaled. -->  
+      <amp-img src="millen1.jpg" layout="responsive" width="266" height="150"></amp-img>
+    </article>
+    <!-- Add the amp-analytics component to the end of the body -->
+
+    <!-- This amp-analytics snippet will send a notification to Google Analytics indicating that a page has been viewed. -->
+
+    <!-- Set the type to googleanalytics and then in the JSON we've created a trigger we've called "default pageview". This trigger will fire when the page is visible (due to the "on": "visible") and when it fires we'll send a pageview analytics request to Google Analytics with the vars we have specified. -->
+
+
+    <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "UA-YYYY-Y"
+      },
+      "triggers": {
+        "default pageview": {
+          "on": "visible",
+          "request": "pageview",
+          "vars": {
+            "title": "Name of the Article"
+          }
+      },
+      "click on #header trigger": {
+      "on": "click",
+      "selector": "#header",
+      "request": "event",
+        "vars": {
+          "eventCategory": "examples",
+          "eventAction": "clicked-header"
+        }
+      }
+    }
+    }
+    </script>
+    </amp-analytics>
+  </body>
+</html>
